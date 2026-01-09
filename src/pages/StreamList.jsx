@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './StreamList.css';
+import addButton from '../assets/add_button.svg'
 
 function StreamList() {
     const [inputValue, setInputValue] = useState('');
@@ -20,7 +21,9 @@ function StreamList() {
                     onChange={(event) => setInputValue(event.target.value)}
                     placeholder='Enter a movie or show...'
                 />
-                <button type='submit'>Add</button>
+                <button className='image-button'>
+                    <img src={addButton} alt='add_button' className='add-button' />
+                </button>
             </form>
         </div>
     );
