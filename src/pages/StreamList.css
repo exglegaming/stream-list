@@ -1,5 +1,36 @@
 .streamlist {
-  width: 100%;
+  max-width: 600px;
+}
+
+.streamlist h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.streamlist form {
   display: flex;
-  align-items: center;
+  gap: 10px;
+}
+
+.streamlist input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.streamlist button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.streamlist button:hover {
+  background-color: #535bf2;
 }
