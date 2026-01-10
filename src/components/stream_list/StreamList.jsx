@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './StreamList.css';
-import addButton from '../assets/add_button.svg'
+import addButton from '../../assets/add_button.svg'
 
 function StreamList() {
     const [inputValue, setInputValue] = useState('');

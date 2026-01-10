@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import StreamList from './pages/StreamList';
-import Movies from './pages/Movies';
-import Cart from './pages/Cart';
-import About from './pages/About';
+import Navbar from './components/navbar/Navbar';
+import StreamList from './components/stream_list/StreamList';
+import Movies from './components/movies/Movies';
+import Cart from './components/cart/Cart';
+import About from './components/about/About';
 import './App.css';
 
 function App() {

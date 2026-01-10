@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import homeButton from '../assets/home_logo.svg';
+import homeButton from '../../assets/home_logo.svg';
 
 const Navbar = () => {
   return (
