@@ -14,6 +14,9 @@ function StreamList() {
     return (
         <div className='streamlist'>
             <h1>Stream List</h1>
+            <div className='enterstreamlistlabel'>
+                <h3>Enter movies or shows to your list:</h3>
+            </div>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 

@@ -34,3 +34,8 @@
 .streamlist button:hover {
   background-color: #535bf2;
 }
+
+.enterstreamlistlabel h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
