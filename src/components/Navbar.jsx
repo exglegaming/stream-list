@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
+import homeButton from '../assets/home_logo.svg';
 
 const Navbar = () => {
   return (
@@ -10,7 +11,10 @@ const Navbar = () => {
         </div>
         <ul className="nav-links">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">
+            <img src={homeButton} alt='home_button' className='home-button' />
+            Home
+            </NavLink>
           </li>
           <li>
             <NavLink to="/movies">Movies</NavLink>
