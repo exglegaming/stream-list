@@ -34,7 +34,9 @@ const Movies = () => {
     if (loading) {
         return (
             <div className='movies'>
-                <h1>Popular Movies</h1>
+                <div className='movies-header'>
+                    <h1>Movies</h1>
+                </div>
                 <p className='loading'>Loading movies...</p>
             </div>
         );
@@ -43,7 +45,9 @@ const Movies = () => {
     if (error) {
         return (
             <div className='movies'>
-                <h1>Popular Movies</h1>
+                <div className='movies-header'>
+                    <h1>Movies</h1>
+                </div>
                 <p className='error'>Error: {error}</p>
             </div>
         );
@@ -51,30 +55,36 @@ const Movies = () => {
 
     return (
         <div className='movies'>
-            <h1>Popular Movies</h1>
-            <div className='movies-grid'>
-                {movies.map((movie) => (
-                    <div key={movie.id} className='movie-card'>
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt={movie.title}
-                            className='movie-poster'
-                        />
-                        <div className='movie-info'>
-                            <h3 className='movie-title'>{movie.title}</h3>
-                            <p className='movie-date'>
-                                {new Date(movie.release_date).getFullYear()}
-                            </p>
-                            <p className='movie-rating'>
-                                <img
-                                    src={starIcon}
-                                    alt='star icon'
-                                    className='star-icon'
-                                /> {movie.vote_average.toFixed(1)}
-                            </p>
+            <div className='movies-header'>
+                    <h1>Movies</h1>
+                </div>
+
+            <div className='movies-section'>
+                <h2 className='section-title'>Popular Movies</h2>
+                <div className='movies-row'>
+                    {movies.map((movie) => (
+                        <div key={movie.id} className='movie-card'>
+                            <img
+                                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                                alt={movie.title}
+                                className='movie-poster'
+                            />
+                            <div className='movie-info'>
+                                <h3 className='movie-title'>{movie.title}</h3>
+                                <p className='movie-date'>
+                                    {new Date(movie.release_date).getFullYear()}
+                                </p>
+                                <p className='movie-rating'>
+                                    <img
+                                        src={starIcon}
+                                        alt='star icon'
+                                        className='star-icon'
+                                    /> {movie.vote_average.toFixed(1)}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );
