@@ -21,6 +21,7 @@ body {
 .main-content {
   margin: 0 auto;
   padding: 10px;
+  padding-top: 80px;
   width: 100%;
   overflow-x: hidden;
 }
