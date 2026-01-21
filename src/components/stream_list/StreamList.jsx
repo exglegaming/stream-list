@@ -7,12 +7,29 @@ import deleteButton from '../../assets/delete_button.svg';
 import saveButton from '../../assets/save_button.svg';
 import cancelButton from '../../assets/close_button.svg';
 
+const STORAGE_KEY = 'streamlist_items';
+const FILTER_KEY = 'streamlist_filter';
+
 function StreamList() {
     const [inputValue, setInputValue] = useState('');
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState(() => {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        return saved ? JSON.parse(saved) : [];
+    });
     const [editId, setEditId] = useState(null);
     const [editValue, setEditValue] = useState('');
-    const [filter, setFilter] = useState('all');
+    const [filter, setFilter] = useState(() => {
+        const saved = localStorage.getItem(FILTER_KEY);
+        return saved || 'all';
+    });
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    }, [items]);
+
+    useEffect(() => {
+        localStorage.setItem(FILTER_KEY, filter);
+    }, [filter]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
