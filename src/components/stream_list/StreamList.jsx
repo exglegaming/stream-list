@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './StreamList.css';
 import addButton from '../../assets/add_button.svg'
 import completeButton from '../../assets/completed_button.svg';
