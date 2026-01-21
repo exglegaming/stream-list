@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import './StreamList.css';
 import addButton from '../../assets/add_button.svg'
 import completeButton from '../../assets/completed_button.svg';
@@ -36,7 +37,7 @@ function StreamList() {
         if (inputValue.trim() === '') return;
         
         const newItem = {
-            id: `${Date.now()}-${Math.random()}`,
+            id: uuidv4(),
             text: inputValue,
             completed: false,
         };
