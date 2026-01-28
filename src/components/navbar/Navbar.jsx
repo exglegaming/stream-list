@@ -11,9 +11,12 @@ const Navbar = () => {
         </div>
         <ul className="nav-links">
           <li>
-            <NavLink to="/">
-            <img src={homeButton} alt='home_button' className='home-button' />
-            Home
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              <img src={homeButton} alt='home_button' className='home-button' />
+              Home
             </NavLink>
           </li>
           <li>
